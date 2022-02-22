@@ -1,13 +1,20 @@
 import React from 'react'
 
 /**specifying the type of props received , props is always passed as a object */
-type GreetingName ={
-    name:string
+type GreetingName = {
+    name: string
 }
-export default function ChildComponent(props:GreetingName) {
-  return (
-    <div>
-      {props.name}
-    </div>
-  )
+// props is object and from parent also we are getting object
+type ProjecProp = {
+    projects: {
+        name: string,
+        grade: number
+    }
+}
+export default function ChildComponent(props: (GreetingName & ProjecProp)) {
+    return (
+        <div>
+            {props.name}{props.projects.grade}
+        </div>
+    )
 }
