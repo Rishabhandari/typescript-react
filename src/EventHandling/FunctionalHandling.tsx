@@ -2,12 +2,13 @@ import React from 'react'
 import ChildComponent from './ChildComponent'
 
 export default function FunctionalHandling() {
-    const handleClick = () => {
-        console.log('clicked');
+    const handleClick = (e) => {
+        console.log(e);
+    
     }
     return (
         <div>
-            <ChildComponent handleClick={handleClick} name='risha'  />
+            <ChildComponent handleClick={(e)=>handleClick(e)} name='risha'  />
         </div>
     )
 }

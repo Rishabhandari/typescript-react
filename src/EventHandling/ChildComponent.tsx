@@ -1,6 +1,6 @@
 import React from 'react'
 export interface Event {
-    handleClick(): void,
+    handleClick(data: React.MouseEvent<HTMLButtonElement>): void,
     name: string,
     rollnumber?: number // means this is optional
 }
