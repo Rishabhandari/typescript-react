@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { BaseSyntheticEvent } from 'react'
 import ChildComponent from './ChildComponent'
 
 export default function FunctionalHandling() {
-    const handleClick = (e) => {
+    const handleClick = (e: BaseSyntheticEvent) => {
         console.log(e);
     }
-    const handleParameter = (data) => {
+    const handleParameter = (data: string) => {
         console.log(`displayed name is ${data}`);
     }
     return (
