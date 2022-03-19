@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 export interface Event {
-    handleClick(data: React.MouseEvent<HTMLButtonElement>): void,
+    handleClick(data): void,
     name: string,
     rollnumber?: number // means this is optional,
     handleParameter(value: string): void
