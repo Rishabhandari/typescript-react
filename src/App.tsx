@@ -1,4 +1,5 @@
 import './App.css';
+import AddContacts from './ContactList/AddContacts';
 import FunctionalHandling from './EventHandling/FunctionalHandling';
 import ParentComponent from './Props/ParentComponent';
 import TextDisplay from './ShowText/TextDisplay';
@@ -9,9 +10,10 @@ function App() {
 
     <div className="App">
       {/* // <ParentComponent />
-    // <FunctionalHandling /> */}
+  //  <FunctionalHandling /> 
       {/* <Todos /> */}
-      <TextDisplay/>
+      {/* <TextDisplay/> */}
+      <AddContacts/>
     </div >
 
   );
