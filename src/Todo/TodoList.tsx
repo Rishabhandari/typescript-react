@@ -31,11 +31,15 @@ export default function TodoList(props: (TodosProps & HandleIsDone)) {
                 return (
                     <div key={index}>
                         <input type='text' key={index} value={todo.todo} disabled={isDisabled} onChange={(e) => props.handleEditTodo(e, todo.id)} />
-                        {isDisabled ? (<><AiFillEdit onClick={handleIsDisabled} /> </>) : <button onClick={handleIsDisabled} >Save</button>}
                         <MdDone onClick={() => props.handleIsDone(todo.id)} />
                         <AiFillDelete onClick={() => props.handleRemoveTodo(todo.id)} />
                     </div>)
             })}
+            <div>
+
+                {isDisabled ? (<><AiFillEdit onClick={handleIsDisabled} /> </>) : <button onClick={handleIsDisabled} >Save</button>}
+
+            </div>
         </div>
     )
 }
